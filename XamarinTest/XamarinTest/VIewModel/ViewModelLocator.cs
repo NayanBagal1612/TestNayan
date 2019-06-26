@@ -12,6 +12,7 @@ namespace XamarinTest.VIewModel
             
             SimpleIoc.Default.Register<MainViewModel>();
         }
+
         public MainViewModel Main
         {
             get
@@ -19,6 +20,7 @@ namespace XamarinTest.VIewModel
                 return ServiceLocator.Current.GetInstance<MainViewModel>();
             }
         }
+
         public static void Cleanup()
         {
             // TODO Clear the ViewModels  

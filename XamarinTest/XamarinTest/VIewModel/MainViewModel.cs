@@ -1,11 +1,11 @@
-﻿
-
+﻿using DataLayer.Services;
 using GalaSoft.MvvmLight;
 
 namespace XamarinTest.VIewModel
 {
     public class MainViewModel : ViewModelBase
     {
+        EmployeeService _employeeService;
 
         #region LABELTEXT
         public const string LABELTEXTPropertyName = "LABELTEXT";
@@ -34,7 +34,9 @@ namespace XamarinTest.VIewModel
 
         public MainViewModel()
         {
-            LABELTEXT="fdjfjyhtgfkuy";
+            _employeeService = new EmployeeService();
+            var res = _employeeService.GetEmployee();
+            LABELTEXT ="Hiii";
         }
     }
 }
